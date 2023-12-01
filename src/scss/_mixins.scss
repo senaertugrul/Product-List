@@ -1,0 +1,32 @@
+@mixin responsive-header-categories($columns: 1) {
+    .categories {
+      display: grid;
+      grid-template-columns: repeat($columns, 1fr);
+      gap: 2rem;
+      
+    }
+  
+    @media (max-width: 1200px) {
+      .categories {
+        grid-template-columns: repeat($columns + 1, 1fr);
+      }
+    }
+  
+    @media (max-width: 991px) {
+      .categories {
+        grid-template-columns: repeat($columns + 2, 1fr);
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .categories {
+        grid-template-columns: repeat($columns + 3, 1fr);
+      }
+  
+    @media (max-width: 450px) {
+      .categories {
+        grid-template-columns: repeat($columns + 4, 1fr);
+      }
+    }
+}
+}    
